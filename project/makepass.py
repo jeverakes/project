@@ -33,7 +33,7 @@ b()
 for pw in passSet:
     for hashy in hashSet:
 	count += 1
-	print count
+	#print count # debug
 	fullpw = ''.join(hashy)
 	fullpw = fullpw.rstrip('\n')
 	fullpw = re.findall(r'(\$\d*\$\w*\d*\S*)', fullpw)
@@ -49,7 +49,7 @@ for pw in passSet:
 	    cmd = str(cmd)
 	    fullpw = str(fullpw)
       	    if cmd == fullpw:
-		print "match sha512"
+		#print "match sha512"
 		file_out.write(user)
 		file_out.write("\n")
             	file_out.write(pw)
@@ -62,7 +62,7 @@ for pw in passSet:
 	    cmd = str(cmd)
 	    fullpw = str(fullpw)
             if cmd == fullpw:
-		print "match md5"
+		#print "match md5"
                 file_out.write(user)
                 file_out.write("\n")
 		file_out.write(pw)
